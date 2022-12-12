@@ -1,0 +1,43 @@
+[debug] [2022-12-09T06:22:49.303Z] ----------------------------------------------------------------------
+[debug] [2022-12-09T06:22:49.306Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-12-09T06:22:49.306Z] CLI Version:   11.17.0
+[debug] [2022-12-09T06:22:49.306Z] Platform:      win32
+[debug] [2022-12-09T06:22:49.306Z] Node Version:  v14.19.1
+[debug] [2022-12-09T06:22:49.309Z] Time:          Fri Dec 09 2022 15:22:49 GMT+0900 (대한민국 표준시)
+[debug] [2022-12-09T06:22:49.309Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-09T06:22:49.319Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-09T06:22:49.320Z] > authorizing via signed-in user (ahc1127@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\PWA\pwa-counter
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-12-09T06:23:15.276Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2022-12-09T06:23:15.276Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"test","name":"test"}
+[debug] [2022-12-09T06:23:16.191Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2022-12-09T06:23:16.192Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id must be at least 6 characters long]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id must be at least 6 characters long"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2022-12-09T06:23:16.374Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id must be at least 6 characters long]
+    at responseToError (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
